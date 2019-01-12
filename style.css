@@ -1,0 +1,184 @@
+html{
+    box-sizing: border-box;
+    text-decoration: unset;
+   
+}
+
+body{
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+      font-family: 'Poppins', sans-serif; 
+      box-sizing: inherit;
+}
+
+.header {
+    grid-area: header;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 21rem;
+}
+.cineville-logo{
+    max-height: 1rem;
+}
+.cineville-logo img{
+  margin: 0.5rem;
+  width: 20vw;
+  max-width: 5rem;
+}
+
+.header-items {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr auto;
+    padding: 0 0.5rem 0 0;
+}
+.navigation ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.navigation-items {
+    color: rgb(9, 41, 58);
+    font-size: calc(1rem + 16 * ((80vw - 40rem) / 1000));
+    font-weight: bold;
+    text-decoration: none;
+}
+.search-login {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   padding: 0.5rem;
+}
+.searchbar {
+    width: 20vw;
+    min-width: 3rem;
+}
+.button {
+    width: auto;
+}
+.navigation-items{
+    padding: 0.5rem;
+    border-right: solid 1px rgb(9, 41, 58);
+}
+
+.navigation-items.no-border {
+    border: none;
+}
+
+.main-content {
+    /* background-color: blue; */
+    margin-block-start: 6rem;
+    grid-area: main;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas: 
+    "advertisement"
+    "film-of-the-week"
+    "film-tips"
+    "film-with-fien"
+    "specials-anticipated"
+    "article-cards"
+    "background";
+}
+
+.adv-cineville{
+grid-area: advertisement;
+color: white;
+background-repeat: no-repeat;
+background-size: cover;
+display: grid;
+justify-items: center;
+align-items: center;
+width: 100vw;
+}
+
+.adv-cineville-message {
+padding: 0 1rem;
+text-align: center;
+}
+
+.order-now{
+    border: solid 0.1rem white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    position: relative;
+    margin-top: -4rem;
+}
+
+.film-of-the-week {
+    grid-area: film-of-the-week;
+}
+
+.cards-film-tips {
+grid-area: film-tips;
+background-repeat: no-repeat;
+ background-size: cover;    
+ display: grid;
+}
+
+.film-with-fien {
+grid-area: film-with-fien;
+
+}
+
+.specials-anticipated{
+grid-area: specials-anticipated;
+
+}
+
+.article-cards {
+  
+    grid-area: article-cards;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 36rem;
+}
+
+.article-card {
+max-width: 18rem;  
+width: 50vw;
+
+
+}
+
+img {
+    max-width: 100%;
+}
+
+.article-card-image {
+max-width: 50%;
+}
+.article-card-title {
+font-size: 1rem;
+}
+.background {
+    grid-area: background;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+/* ############### media query ################### */
+
+/* grid-template-rows: 2rem auto 2rem;
+grid-auto-columns: auto 1fr auto;
+grid-template-areas:
+  "header  header  header"
+  ".       main    ."
+  "footer  footer  footer"; */
