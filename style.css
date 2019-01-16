@@ -11,11 +11,12 @@ body{
       "header"
       "main"
       "footer";
-    grid-template-rows: 5rem auto auto;
+    grid-template-rows: rem auto auto;
       font-family: 'Poppins', sans-serif; 
     box-sizing: inherit;
 }
 
+/* ############################ HEADER #################################### */
 .header {
     grid-area: header;
     position: fixed;
@@ -28,14 +29,11 @@ body{
     z-index: 999;
 }
 
-.cineville-logo{
-    max-height: 1rem;
-}
 .cineville-logo img{
     margin: 0.7rem;
     width: 20vw;
     max-width: 6.5rem;
-    min-width: 5.5rem;
+    min-width: 5rem;
 }
 
 .header-items {
@@ -63,10 +61,6 @@ body{
    align-items: center;
    padding: 0.5rem;
 }
-.searchbar {
-    width: 20vw;
-    min-width: 3rem;
-}
 .button {
     width: auto;
 }
@@ -78,33 +72,33 @@ body{
 .navigation-items.no-border {
     border: none;
 }
+/* ################################ MAIN ############################################ */
 
 .main-content {
-    /* background-color: blue; */
     grid-area: main;
+    width: auto;
     display: grid;
     grid-gap: 1rem;
     grid-template-areas: 
-    "advertisement advertisement advertisement"
-    ". film-of-the-week ."
-    ". film-tips ."
-    ". film-with-fien ."
-    ". specials-anticipated ."
-    ". article-cards ."
-    ". background .";
-    grid-template-columns: minmax(1rem, 10rem) auto minmax(1rem, 10rem)
+    "advertisement"
+    "film-of-the-week"
+    "film-tips"
+    "film-with-fien"
+    "specials-anticipated"
+    "article-cards"
+    "background";
 }
 
 .block {
     display: flex;
     border: solid lightgray 2px;
+    padding: 0 1rem 0 1rem;
 }
 .adv-cineville{
     grid-area: advertisement;
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
@@ -129,13 +123,16 @@ body{
 
 .film-of-the-week {
     grid-area: film-of-the-week;
-    display: flex;
     flex-wrap: wrap;
+    width: 100vw;
 }
+video {
+width: 100vw;
+max-width: 40rem;
 
+}
 .cards-film-tips {
     grid-area: film-tips;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -150,6 +147,7 @@ body{
 .card-tip-title {
     background-repeat: no-repeat;
     background-size: cover;  
+    background-position: center;
     min-height: 12rem;
     min-width: 30vh;
     display: flex;
@@ -176,9 +174,9 @@ body{
 }
 
 .quote-review {
-text-decoration: none;
-color: black;
-font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
 }
 .specials-anticipated{
     grid-area: specials-anticipated;
@@ -203,22 +201,45 @@ font-size: 1.5rem;
 }
 
 .article-card {
-    max-width: 18rem;  
-    width: 50vw;
-    margin: 1rem;
-
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    flex-basis: 1rem;
+    flex-grow: 1;
+    flex-shrink 1;
 }
 
+.block-image {
+    width: 16rem;
+    height: 9rem;
+}
 .article-card-title {
     font-size: 1rem;
+    padding: 0 0 0 1rem;
+}
+.article-card-content {
+    width: auto;
+    max-width: 16rem;
+    padding: 0 0 0 1rem;
+    flex-grow: 1;
+    flex-shrink 1;
 }
 .background {
     grid-area: background;
-    display: flex;
-    flex-direction: column;
     margin-bottom: 2rem;
 }
 
+.article-background {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    background: red;
+    flex-basis: 1vw;
+    flex-grow: 1;
+    flex-shrink 0;
+    margin: 0 1rem;
+}
+    
 .footer {
     grid-area: footer;
     background-repeat: no-repeat;
