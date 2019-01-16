@@ -11,9 +11,10 @@ body{
       "header"
       "main"
       "footer";
-    grid-template-rows: rem auto auto;
+    grid-template-rows: 5rem auto auto;
       font-family: 'Poppins', sans-serif; 
     box-sizing: inherit;
+
 }
 
 /* ############################ HEADER #################################### */
@@ -24,36 +25,33 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    /* voor maximaal 2 rijen voor nav items */    
-    min-width: 21rem;
     z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    min-width: 480px;
 }
 
-.cineville-logo img{
-    margin: 0.7rem;
-    width: 20vw;
-    max-width: 6.5rem;
-    min-width: 5rem;
-}
+.header-image img{
+   margin: 0.7rem;
+   object-fit: scale-down;
+   width: 10vw;
+   min-width: 6rem;
 
-.header-items {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 2fr auto;
-    padding: 0 0.5rem 0 0;
 }
 .navigation ul{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+
 }
 
 .navigation-items {
     color: rgb(9, 41, 58);
-    font-size: calc(1rem + 16 * ((80vw - 40rem) / 1000));
+    font-size: calc(1rem + 8 * ((80vw - 40rem) / 1000));
     font-weight: bold;
     text-decoration: none;
+
 }
 .search-login {
    display: flex;
@@ -90,11 +88,13 @@ body{
 }
 
 .block {
+    padding: 0 1rem 0 1rem;
     display: flex;
     border: solid lightgray 2px;
-    padding: 0 1rem 0 1rem;
+
 }
 .adv-cineville{
+
     grid-area: advertisement;
     color: white;
     background-repeat: no-repeat;
@@ -191,7 +191,9 @@ max-width: 40rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border: solid red 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
 }
 .article-cards {
